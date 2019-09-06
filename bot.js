@@ -49,4 +49,4 @@ phxbot.on('message', msg => {
         displayMessage("!newradio pour générer une nouvelle fréquence | !radio pour afficher la fréquence actuelle", msg, command);
 });
 
-phxbot.login('NjAxNDI5NTg5Mjk3OTg3NjI0.XTCO9w.qIbMXGqd3DoUc9yJf4f7yta28FE');
+phxbot.login('secret code here');
