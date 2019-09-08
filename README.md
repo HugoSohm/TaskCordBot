@@ -8,7 +8,7 @@ Le DiscordBot est un bot discord en Node.js permettant de générer des fréquen
 
 ### Librairies
 
-Le MSbot fonctionne à l'aide de Node.js ainsi qu'à l'API Discord
+Le Discordbot fonctionne à l'aide de Node.js ainsi qu'à l'API Discord
 
 - [Node.js](https://nodejs.org/en/)
 - [API Discord](https://discordapp.com/developers/docs/intro)
