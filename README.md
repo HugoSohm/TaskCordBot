@@ -1,41 +1,37 @@
-<div align="center"><h1>DiscordBot</h1>
+<h1>TaskCordBot</h1>
 
-Le DiscordBot est un bot discord en Node.js permettant de générer des fréquences radio de courte portée pour le module Task Force Radio présent dans Arma 3
+TaskCordBot is a discord bot in Node.js allowing to generate short range radio frequencies for the Task Force Radio module present in Arma 3
 
-<img src="https://www.slashgear.com/wp-content/uploads/2019/07/discord_main-1-1280x720.jpg" alt="Discordbot" /></div>
+## About
 
-## Projet Discordbot
+### Libraries
 
-### Librairies
-
-Le Discordbot fonctionne à l'aide de Node.js ainsi qu'à l'API Discord
+TaskCordBot works with Node.js and the Discord API
 
 - [Node.js](https://nodejs.org/en/)
 - [API Discord](https://discordapp.com/developers/docs/intro)
 
-## Installation et éxécution
+## Installation and running
 
-### Récupération du projet
-
-Après avoir cloné le [répertoire](https://github.com/HugoSohm/Discordbot):
+- Clone the [repository](https://github.com/HugoSohm/Discordbot):
 
 ```
 git clone https://github.com/HugoSohm/Discordbot
 ```
 
-- Se rendre à la racine du projet :
+- Get to the root
 
 ```
 $ cd Discordbot
 ```
 
-- Vérifier que tout est à jour :
+- Update the project (if already downloaded)
 
 ```
 $ git checkout master
 ```
 
-- Exécuter le bot :
+- Run
 
 ```
 $ node bot.js
