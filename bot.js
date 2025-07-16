@@ -1,5 +1,5 @@
 const { Client, Events, GatewayIntentBits } = require('discord.js');
-const phxbot = new Client({ intents: [GatewayIntentBits.Guilds] });
+const phxbot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -35,22 +35,21 @@ phxbot.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
-phxbot.on('message', msg => {
-    var command = msg.content;
-
+phxbot.on(Events.MessageCreate, message => {
+    if (message.author.bot) return;
+    
+    var command = message.content;
     if (command === '!newradio') {
-        displayMessage("la nouvelle fréquence radio est " + generateRandomRadio(), msg, command);
+        displayMessage("La nouvelle fréquence radio est " + generateRandomRadio(), message, command);
     }
-
     if (command === '!radio') {
         if (freq == null)
-            displayMessage("aucune fréquence n'est définie, écrit !newradio pour en générer une", msg, command);
+            displayMessage("Aucune fréquence n'est définie, écrit !newradio pour en générer une", message, command);
         else
-            displayMessage("la fréquence radio actuelle est " + freq + " [Création le " + date + " à " + time + "]", msg, command);
+            displayMessage("La fréquence radio actuelle est " + freq + " [Création le " + date + " à " + time + "]", message, command);
     }
-
     if (command === "!commands")
-        displayMessage("!newradio pour générer une nouvelle fréquence | !radio pour afficher la fréquence actuelle", msg, command);
+        displayMessage("!newradio pour générer une nouvelle fréquence | !radio pour afficher la fréquence actuelle", message, command);
 });
 
 phxbot.login(process.env.DISCORD_TOKEN);

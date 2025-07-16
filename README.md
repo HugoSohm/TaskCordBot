@@ -38,3 +38,7 @@ $ npm i
 ```
 $ node bot.js
 ```
+
+- Add the bot to your server _(with your bot client id)_
+
+https://discord.com/oauth2/authorize?client_id=client-id-value&scope=bot&permissions=8
