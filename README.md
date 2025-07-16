@@ -13,22 +13,24 @@ TaskCordBot works with Node.js and the Discord API
 
 ## Installation and running
 
-- Clone the [repository](https://github.com/HugoSohm/Discordbot):
+- Clone the [repository](https://github.com/HugoSohm/Discordbot)
 
 ```
 git clone https://github.com/HugoSohm/Discordbot
 ```
 
-- Get to the root
+- Add your Discord bot token
+
+1. Go to the "Bot" section on https://discord.com/developers to get the `TOKEN` value
+
+2. Rename the `.env.example` file into `.env`
+
+3. Add `TOKEN` value to the `DISCORD_TOKEN` env variable in `.env`
+
+- Install packages
 
 ```
-$ cd Discordbot
-```
-
-- Update the project (if already downloaded)
-
-```
-$ git checkout master
+$ npm i
 ```
 
 - Run

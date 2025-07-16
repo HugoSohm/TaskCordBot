@@ -1,0 +1,12 @@
+{
+  "name": "task-cord-bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "repository": "https://github.com/HugoSohm/TaskCordBot.git",
+  "author": "hsohm <hugo.sohm@epitech.eu>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.0"
+  }
+}

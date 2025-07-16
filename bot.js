@@ -1,5 +1,9 @@
-const Discord = require('discord.js');
-const phxbot = new Discord.Client();
+const { Client, Events, GatewayIntentBits } = require('discord.js');
+const phxbot = new Client({ intents: [GatewayIntentBits.Guilds] });
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 var today = new Date();
 var freq, date, time;
 
@@ -27,8 +31,8 @@ function displayMessage(string, msg, command) {
         .catch(console.error);
 }
 
-phxbot.on('ready', () => {
-    console.log("PHXBot connecté");
+phxbot.once(Events.ClientReady, readyClient => {
+	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
 phxbot.on('message', msg => {
@@ -45,8 +49,8 @@ phxbot.on('message', msg => {
             displayMessage("la fréquence radio actuelle est " + freq + " [Création le " + date + " à " + time + "]", msg, command);
     }
 
-    if (command === "!commandes")
+    if (command === "!commands")
         displayMessage("!newradio pour générer une nouvelle fréquence | !radio pour afficher la fréquence actuelle", msg, command);
 });
 
-phxbot.login('secret code here');
+phxbot.login(process.env.DISCORD_TOKEN);
